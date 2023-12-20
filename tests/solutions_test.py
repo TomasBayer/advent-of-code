@@ -1,10 +1,16 @@
-from advent_of_code.solutions import day_16
+from advent_of_code.solutions import day_2023_16
 
 
 class TestDay16:
 
     def test_day_16(self):
-        test_data = """
+        assert day_2023_16.get_part1_solution(r"..|..") == 3
+        assert day_2023_16.get_part1_solution(r"..-..") == 5
+        assert day_2023_16.get_part1_solution(r"../..""\n"r".....") == 3
+        assert day_2023_16.get_part1_solution(r"..\..""\n"r".....") == 4
+        assert day_2023_16.get_part1_solution(r"..|..""\n"r".....") == 4
+
+        test_data = r"""
             .|...\....
             |.-.\.....
             .....|-...
@@ -16,4 +22,4 @@ class TestDay16:
             .|....-|.\
             ..//.|....
         """
-        assert day_16.get_solution(test_data) == 46
+        assert day_2023_16.get_part1_solution(test_data) == 46
